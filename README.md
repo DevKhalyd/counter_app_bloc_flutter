@@ -1,16 +1,25 @@
-# counter_bloc
+# Counter App
 
-A new Flutter project.
+This is an app created with the BLoC pattern
 
-## Getting Started
+## Counter cubit
 
-This project is a starting point for a Flutter application.
+Basically this class handle the state of the view
 
-A few resources to get you started if this is your first Flutter project:
+**counter_cubit**
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+```dart
+class CounterCubit extends Cubit<int> {
+  /// {@macro counter_cubit}
+  /// The initial state should be called
+  CounterCubit() : super(0);
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+  /// Add 1 to the current state.
+  void increment() => emit(state + 1);
+
+  /// Subtract 1 from the current state.
+  void decrement() => emit(state - 1);
+}
+```
+
+## Test

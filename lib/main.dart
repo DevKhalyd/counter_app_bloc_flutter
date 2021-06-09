@@ -1,6 +1,6 @@
-import 'package:counter_bloc/features/counter/counter_observer.dart';
-import 'package:counter_bloc/features/counter/view/counter_page.dart';
 import 'package:flutter/material.dart';
+
+import 'features/counter/counter.dart';
  
 void main() {
   runApp(const CounterApp());
